@@ -1,111 +1,127 @@
-body {
+html {
   margin: 0;
   padding: 0;
-  background-color: black;
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  margin: 0;
+  padding: 0;
 }
 
 #navbar {
-  height: 10vh;
-  width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: solid 1px white;
+  background-color: orange;
 }
 
-#navbar a {
-  font-weight: bold;
+#textos {
+  width: 70%;
+}
+
+#textos h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+#textos p {
+  text-align: justify;
   font-size: 1.5rem;
-  color: white;
-  text-decoration: none;
-  transition: .15s;
 }
 
-#navbar a:hover {
-  transform: scale(1.1);
-  transition: .15s;
+.image {
+  margin: 20px;
+  width: 15%;
+  -webkit-animation: spin 5s linear infinite;
+  -moz-animation: spin 5s linear infinite;
+  animation: spin 5s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 main {
   display: flex;
-  flex-direction: column;
-  gap: 100px;
-  padding: 40px;
-  width: 60%;
-  margin: 0 auto;
-  border: solid 1px white;
+  overflow-x: auto;
 }
 
-#comeco {
+#perg1,
+#perg2,
+#perg3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-#comeco h1,p {
-  color: white;
-}
-
-#consciencia {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  color: white;
-  margin: 0 auto;
-}
-
-.conteudo {
-  display: flex;
-}
-
-.conteudo img {
+  align-items: center;
+  width: 33.3%;
+  background-color: #f0f0f0;
+  border: solid 1px orange;
+  border-radius: 10px;
+  padding: 2rem;
   margin: 20px;
-  width: 50%;
-  height: 50%;
+}
+
+#perg1 img,
+#perg2 img,
+#perg3 img {
+  width: 40%;
+}
+
+.perg_link {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  margin: 20px;
+  padding: 10px;
+  border: solid 1px orange;
+  border-radius: 10px;
+  background-color: white;
   transition: .15s;
-  border-radius: 999px;
 }
 
-.conteudo img:hover {
-  transform: scale(1.1);
+.perg_link:hover {
+  transform: scale(1.2);
   transition: .15s;
-}
-
-.consciencia_texto {
-  font-size: 1.2rem;
-}
-
-.chegar_texto {
-  font-size: 1.2rem;
-}
-
-.caracteristica_texto {
-  font-size: 1.2rem;
-}
-
-#chegar {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  color: white;
-}
-
-#caracteristica {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  color: white;
 }
 
 footer {
-  border-top: solid 1px white;
-  text-align: center;
+  height: 220px;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+}
+
+#eu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#eu img {
+  width: 15%;
 }
